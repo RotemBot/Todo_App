@@ -1,0 +1,34 @@
+﻿<Window x:Class="UI.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:UI"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="350" Width="525">
+    <Grid>
+    <Grid Style="{StaticResource MyGridStyle}"/>
+    <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="5*"/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="2*"/>
+                    <ColumnDefinition Width="1*"/>
+                </Grid.ColumnDefinitions>
+                <Button Grid.Row="0" Grid.Column="1" Content="New ToDo" Style="{StaticResource MyButtonStyle}"/>
+                <Button Grid.Row="0" Grid.Column="0" Content="Search by date" HorizontalAlignment="Left" Height="34" Margin="191,10,0,0" VerticalAlignment="Top" Width="103" FontSize="12" Style="{StaticResource MyButtonStyle}"/>
+                <Button Grid.Row="0" Grid.Column="0" Content="Search by topic" HorizontalAlignment="Left" Height="34" Margin="40,10,0,0" VerticalAlignment="Top" Width="103" FontSize="12" Style="{StaticResource MyButtonStyle}"/>
+
+            </Grid>
+            <Grid Grid.Row="1">
+                <local:Clock Grid.Row="0" Height="35" Width="85" HorizontalAlignment="Left" VerticalAlignment="Top" Loaded="Clock_Loaded"/>
+            </Grid>
+            <Grid.Background>
+                    <ImageBrush ImageSource="Images/sea.jpg" Stretch="UniformToFill"/>
+                </Grid.Background>
+            </Grid>
+    </Grid>
+</Window>
